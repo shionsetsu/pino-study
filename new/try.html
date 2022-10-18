@@ -6,20 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>try</title>
     <link rel="stylesheet" href="css/.css">
-    <script type="text/javascript">
-        var now = new Date();
-        function LoadPrac(){
-            var target = document.getElementById("DateTimeDisp");
-    
-            var Year = now.getFullYear();
-            var Month = now.getMonth()+1;
-            var Date = now.getDate();
-            var Hour = now.getHours();
-            var Sec = now.getSeconds();
-    
-            target.innerHTML = Year + "年" + Month + "月" + Date + "日" + Hour + ":" + Min + ":" + Sec;
-        }
-    </script>
 </head>
 <body>
 <h1>JavaScriot入門</h1>
@@ -27,5 +13,21 @@
 <button onclick="dateFunction01()">日時を表示</button>
 <p id="date01">ここに現在の「年月日」が表示されます</p>
 <p>Hello Hollywood</p>
+<script>
+    alert("Hello!")
+    function dateFunction01(){
+        //日付オブジェクトを作成する
+        var dd = new Date();
+        //「年」を取得する
+        var YYYY =dd.getFullYear();
+        //月を取得する
+        var MM = dd.getMonth()+1;
+        //日を取得する
+        var DD = dd.getDate();
+        //段落タグ("date01")の中身を置き換える
+        var pelem01 = document.getElementById("date01");
+        pelem01.innerHTML = YYYY + "/" + MM +"/" + DD;
+    }
+</script>
 </body>
 </html>
