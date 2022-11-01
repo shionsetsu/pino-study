@@ -5,13 +5,15 @@ const box = document.querySelectorAll(".box");
 //     console.dir (box[i]);
 // }
 
+let flg = false;
 //  配列.forEach( () => {繰り返したい内容})
 box.forEach((e,i)=>{
     e.addEventListener('mousedown',() => {
         console.log("押した");
-        e.style.backgroundColor="green";
-        e.style.color="gold";
-        e.textContent="かきくけこ"
+        e.style.backgroundColor="brown";
+        e.style.color="violet";
+        e.textContent="すーぱー"
+        flg = true;
     });
 
     e.addEventListener('mouseup',() => {
@@ -19,6 +21,7 @@ box.forEach((e,i)=>{
         e.style.backgroundColor="tomato"
         e.style.color="";
         e.textContent="box";
+        flg = false;
     });
 
     e.addEventListener('mouseleave',()=>{
@@ -33,10 +36,9 @@ box.forEach((e,i)=>{
 window.addEventListener("mousemove",(evt) =>{
     console.log(box[0]);
     console.log(evt.clientX,evt.clientY);
-    box[0].style.left=(evt.clientX-62.5)+"px";
-    box[0].style.top=(evt.clientY-62.5)+"px";
-
     if(flg){
+        box[0].style.left=(evt.clientX-62.5)+"px";
+        box[0].style.top=(evt.clientY-62.5)+"px";
         
     };
 });
