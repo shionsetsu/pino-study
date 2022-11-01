@@ -1,0 +1,64 @@
+.output{
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 100px;
+    text-align: center;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    position: absolute;
+}
+
+.output p::before{
+    content: "";
+    display: block;
+    height: 20px;
+    width: 20px;
+    border: solid 1px green;
+    border-top: black solid 10px;
+    border-left:solid 10px transparent;
+    border-right:solid 10px transparent;
+    border-bottom:solid 10px transparent;
+
+
+    /* border-radius: 0 0 30px 30px; */
+    position: absolute;
+    top: 54px;
+    margin-left: 40px;
+    background-color: rgb(0, 0, 0);
+    z-index: 10;
+}
+
+.output p::after{
+    content: "";
+    display: block;
+    height: 80px;
+    width: 80px;
+    /* border: solid 8px magenta; */
+    border-radius: 100px;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color:rgb(210, 206, 206);
+    transform: scaleY(0.2);
+    z-index: 1;
+}
+
+input{
+    width: 125px;
+    height: 25px;
+    background: blue;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3px;
+    border: solid 1px gold;
+}
+
+.comand{
+    border: solid 1px green;
+    position: absolute;
+    bottom: 0;
+}
