@@ -1,35 +1,41 @@
-.output{
-    border: solid 1px rgb(0, 0, 0);
+.wall{
+    width: 100%;
+    height: 80vh;
+    background-color: yellow;
+    border: tomato 1px solid;
+}
+
+.text{
+    border: solid 1px rgb(217, 9, 9);
     border-radius: 10px;
+    height: 40px;
     width: 100px;
     text-align: center;
     display: block;
     background-color: rgb(0, 0, 0);
     color: white;
-    position: absolute;
+    position: relative;
 }
 
-.output p::before{
+.text::before{
     content: "";
     display: block;
-    height: 20px;
-    width: 20px;
-    border: solid 1px green;
-    border-top: black solid 10px;
-    border-left:solid 10px transparent;
-    border-right:solid 10px transparent;
-    border-bottom:solid 10px transparent;
-
-
-    /* border-radius: 0 0 30px 30px; */
+    width: 0;
+    height: 0;
+    background-color: rgb(209, 30, 30);
+    /* border-style: solid;
+    border-width: 20px 15px 0 15px;
+    border-color: rgb(181, 39, 39) transparent; */
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+    border-top: 15px solid rgb(16, 15, 15);
     position: absolute;
-    top: 54px;
+    top: 51px;
     margin-left: 40px;
-    background-color: rgb(0, 0, 0);
     z-index: 10;
 }
 
-.output p::after{
+.text::after{
     content: "";
     display: block;
     height: 80px;
@@ -37,7 +43,7 @@
     /* border: solid 8px magenta; */
     border-radius: 100px;
     position: absolute;
-    top: 40px;
+    top: 20%;
     left: 0;
     right: 0;
     margin: 0 auto;
@@ -59,6 +65,5 @@ input{
 
 .comand{
     border: solid 1px green;
-    position: absolute;
-    bottom: 0;
+    height: 20vh;
 }
