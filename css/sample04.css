@@ -81,7 +81,7 @@ input{
     display: flex;
 }
 
-.comand{
+.command{
     border: solid 1px green;
     height: 10vh;
 }
